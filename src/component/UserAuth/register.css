@@ -1,0 +1,25 @@
+form{
+    max-width:400px;
+    width:100%;
+    margin: 2rem auto;
+
+
+}
+form h2{
+    margin-bottom: 1rem;;
+}
+button,input{
+    height:35px;
+    width:100%;
+    padding:7px;
+    outline:none;
+    border-radius:5px;
+    border:1px solid rgb(220,220,220);
+    margin-bottom: 1rem;
+}
+button{
+    cursor:pointer;
+}
+p{
+    color:red;
+}
