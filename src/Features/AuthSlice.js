@@ -9,7 +9,7 @@ const initialState={
     _id:"",
     name:"",
     email:"",
-   
+    isAdmin:"",
     registerStatus:"",
     registerError:  "",
     loginStatus:"",
@@ -80,6 +80,7 @@ const authSlice=createSlice({
                     name:user.name,
                     email:user.email,
                     _id:user._id,
+                    isAdmin:user.isAdmin,
                    userLoaded:true
 
                 }
@@ -121,6 +122,7 @@ const authSlice=createSlice({
                 name:user.name,
                 email:user.email,
                 _id:user._id,
+                isAdmin:user.isAdmin,
                 registerStatus:"success"
 
             }
@@ -154,6 +156,7 @@ return{
             name:user.name,
             email:user.email,
             _id:user._id,
+            isAdmin:user.isAdmin,
             loginStatus:"success"
 
         }

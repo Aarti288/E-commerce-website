@@ -30,6 +30,7 @@ const Register = () => {
 
     const handleSubmit=(e)=>{
         e.preventDefault();
+       
         dispatch(registerUser(user))
     }
     return (
@@ -39,7 +40,7 @@ const Register = () => {
             <input type="text" placeholder=" Enter name" onChange={(e)=>setUser({...user,name:e.target.value})}/>
             <input type="email" placeholder="Enter email" onChange={(e)=>setUser({...user,email:e.target.value})}/>
             <input type="password" placeholder="Enter password" onChange={(e)=>setUser({...user,password:e.target.value})}/>
-            <button> {auth.registerStatus==="pending" ? "submitting":"Register"}</button>
+            <button > {auth.registerStatus==="pending" ? "submitting":"Register"}</button>
 
 
            {auth.registerStatus==="rejected" ?  (<p>{auth.registerError}</p>):null}

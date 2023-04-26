@@ -12,7 +12,7 @@ const CartSlice=createSlice({
         addToCart(state,action){
 
 
-           const index= state.cartItems.findIndex((item)=>item.id===action.payload.id);
+           const index= state.cartItems.findIndex((item)=>item._id===action.payload._id);
 
            if(index>=0)
            {
@@ -37,7 +37,7 @@ const CartSlice=createSlice({
 
         removecart(state,action){
             const nextCartItem= state.cartItems.filter(
-                cartItem => cartItem.id!==action.payload.id
+                cartItem => cartItem._id!==action.payload._id
             )
             state.cartItems=nextCartItem
             localStorage.setItem("cartItems",JSON.stringify(state.cartItems))

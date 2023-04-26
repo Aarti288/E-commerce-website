@@ -23,16 +23,29 @@ import {toast }from "react-toastify"
         
         
 
-        {
-          auth._id ?  <Logout onClick={()=>{
-            dispatch(logoutUser(null))
-            toast.warning("YOu have logged out!",{position:"bottom-left"})
-          }}>Logout</Logout>:<AuthLinks>
-            <Link to="/login">Login</Link>
-            <Link to="/register">Register</Link>
-          </AuthLinks>
-        }
-       
+       {auth._id ? (
+        <Links>
+          {auth.isAdmin ? (
+            <div>
+              <Link to="/admin/summary">Admin</Link>
+            </div>
+          ) : null}
+          {/* <Link to="/admin/summary">Admin</Link> */}
+          <div
+            onClick={() => {
+              dispatch(logoutUser(null));
+              toast.warning("Logged out!", { position: "bottom-left" });
+            }}
+          >
+            Logout
+          </div>
+        </Links>
+      ) : (
+        <AuthLinks>
+          <Link to="/login">Login</Link>
+          <Link to="register">Register</Link>
+        </AuthLinks>
+      )}
        </nav>
       )
   }
@@ -41,10 +54,10 @@ import {toast }from "react-toastify"
   const AuthLinks=styled.div`
 
   a{
-    &:last-child{
+   
       margin-left:2rem;
     }
-  }
+  
   
   `
 
@@ -58,3 +71,13 @@ import {toast }from "react-toastify"
 
 
   `
+  const Links = styled.div`
+  color: white;
+  display: flex;
+  div {
+    cursor: pointer;
+    &:last-child {
+      margin-left: 2rem;
+    }
+  }
+`;

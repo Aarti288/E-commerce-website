@@ -19,10 +19,46 @@ const Products=[
     {
         id:3,
         name:"google pixel",
+        price:260000,
+        image:"https://res.cloudinary.com/djg14xmqo/image/upload/v1681581428/online-shop/googlepixel_hsoopo.jpg",
+        desc:"6.4inch display"
+    },
+    {
+        id:4,
+        name:"Apple",
+        price:740000,
+        image:"https://res.cloudinary.com/djg14xmqo/image/upload/v1682271344/E-commerce/Apple_opsc7y.jpg",
+        desc:"4.5inch display"
+    },
+    {
+        id:5,
+        name:"Vivo",
+        price:45000,
+        image:"https://res.cloudinary.com/djg14xmqo/image/upload/v1682073446/E-commerce/bhefmysfszoujxfa8m8j.jpg",
+        desc:"6.4inch display"
+    },
+    {
+        id:6,
+        name:"google pixel",
         price:150000,
         image:"https://res.cloudinary.com/djg14xmqo/image/upload/v1681581428/online-shop/googlepixel_hsoopo.jpg",
         desc:"6.4inch display"
     },
+    {
+        id:7,
+        name:"google pixel",
+        price:150000,
+        image:"https://res.cloudinary.com/djg14xmqo/image/upload/v1681581428/online-shop/googlepixel_hsoopo.jpg",
+        desc:"6.4inch display"
+    },
+    {
+        id:8,
+        name:"google pixel",
+        price:150000,
+        image:"https://res.cloudinary.com/djg14xmqo/image/upload/v1681581428/online-shop/googlepixel_hsoopo.jpg",
+        desc:"6.4inch display"
+    },
+   
    
 ]
 module.exports=Products;
